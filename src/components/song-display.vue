@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="song-display">
     <h1>{{ song.title }}</h1>
     <h6 v-if="song.notes">{{ song.notes }}</h6>
     <p v-for="line in displaySong" :key="line">{{ line }}</p>

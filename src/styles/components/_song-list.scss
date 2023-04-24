@@ -1,0 +1,17 @@
+.song-list {
+  display: flex;
+  justify-content: center;
+  ul {
+    // margin: 0px;
+    padding: 0px;
+    li {
+      list-style: none;
+      border: solid 3px white;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 10px;
+      color: white;
+      font-size: rem(24px);
+    }
+  }
+}
