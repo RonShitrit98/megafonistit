@@ -20,7 +20,7 @@ export default {
   },
   methods:{
     openSong(song){
-        console.log(song.body)
+        this.$emit('goTo', 'song-display', song)
     }
   }
 };

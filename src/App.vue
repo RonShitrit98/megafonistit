@@ -1,10 +1,13 @@
 <template>
+  <header>
+    <main-header />
+  </header>
   <main>
-    <h1>HOME</h1>
-    <song-list />
+    <main-content />
   </main>
 </template>
 
 <script setup>
-import songList from "./components/song-list.vue";
+import mainHeader from "./components/main-header.vue";
+import mainContent from "./components/main-content.vue";
 </script>
