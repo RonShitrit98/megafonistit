@@ -2,9 +2,10 @@
   <div class="song-list">
     <ul>
       <li v-for="song in songs" :key="song.title" @click="openSong(song)">
-        {{
-          song.title
-        }}
+        {{ song.title }}
+
+        <img v-if="song.stillImg" :src="song.stillImg" alt="" />
+        <img v-else :src="song.sign" alt="" />
       </li>
     </ul>
   </div>
@@ -18,11 +19,11 @@ export default {
       songs: songService.getSongs(),
     };
   },
-  methods:{
-    openSong(song){
-        this.$emit('goTo', 'song-display', song)
-    }
-  }
+  methods: {
+    openSong(song) {
+      this.$emit("goTo", "song-display", song);
+    },
+  },
 };
 </script>
 ]
