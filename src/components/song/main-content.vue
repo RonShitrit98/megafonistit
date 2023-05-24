@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import songList from "../components/song/song-list.vue";
-import songDisplay from "../components/song/song-display.vue";
+import songList from "./song-list.vue";
+import songDisplay from "./song-display.vue";
 export default {
   data() {
     return {
@@ -19,8 +19,8 @@ export default {
     };
   },
   methods: {
-    goTo(songId) {
-      this.$router.push(`${songId}`);
+    goTo(cmp, entity) {
+      console.log(entity);
     },
     // goBack() {
     //   this.cmp = "song-list";

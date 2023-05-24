@@ -9,8 +9,18 @@
 </template>
 
 <script>
+import { songService } from "../../services/song-service";
 export default {
-  props: ["song"],
+  data() {
+    return {
+      song: null,
+    };
+  },
+  created() {
+    console.log(this.$route.params.id);
+    this.song = songService.getSong(this.$route.params.id);
+    console.log(this.song);
+  },
   computed: {
     displaySong() {
       const song = this.song.body.split("*");

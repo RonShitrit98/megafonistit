@@ -1,7 +1,7 @@
 <template>
   <div class="song-list">
     <ul>
-      <li v-for="song in songs" :key="song.title" @click="openSong(song)">
+      <li v-for="song in songs" :key="song.id" @click="openSong(song.id)">
         {{ song.title }}
 
         <img v-if="song.stillImg" :src="song.stillImg" alt="" />
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { songService } from "../services/song-service";
+import { songService } from "../../services/song-service";
 export default {
   data() {
     return {
@@ -20,8 +20,8 @@ export default {
     };
   },
   methods: {
-    openSong(song) {
-      this.$emit("goTo", "song-display", song);
+    openSong(songId) {
+      this.$emit("goTo", songId);
     },
   },
 };
