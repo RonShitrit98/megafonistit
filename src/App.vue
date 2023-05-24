@@ -3,11 +3,12 @@
     <main-header />
   </header>
   <main>
-    <main-content />
+    <router-view/>
+    <!-- <main-content /> -->
   </main>
 </template>
 
 <script setup>
 import mainHeader from "./components/main-header.vue";
-import mainContent from "./components/main-content.vue";
+// import mainContent from "./components/main-content.vue";
 </script>
